@@ -1,0 +1,12 @@
+server:
+  port: 9092
+spring:
+  application:
+    name: consumer-movie-without-eureka
+
+provider-user:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule # 随机访问
+    listOfServers: http://192.168.3.108:8081,http://192.168.3.108:9091 # ribbon客户端请求的列表地址
+
+

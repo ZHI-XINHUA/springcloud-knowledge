@@ -1,0 +1,21 @@
+server:
+  port: 9094
+spring:
+  application:
+    name: consumer-movie-ribbon-customizing-properties
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
+
+# 自定riddon的负载规则为随机（RandomRule）
+provider-user:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
