@@ -20,6 +20,7 @@
       <module>consumer-movie</module>
       <module>common</module>
       <module>eureka-server</module>
+      <module>discovery-eureka</module>
       <module>consumer-movie-ribbon-customizing</module>
       <module>consumer-movie-ribbon-customizing-properties</module>
 	  <module>consumer-movie-without-eureka</module>
@@ -27,7 +28,7 @@
       <module>consumer-movie-feign-customizing</module>
       <module>provider-user-with-auth</module>
       <module>consumer-movie-feign-manual</module>
-	 
+	  <module>consumer-movie-ribbon-hystrix</module>
     </modules>
 
     <name>microserver-parent</name>
@@ -58,6 +59,12 @@
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-actuator</artifactId>
+      </dependency>
+      <!--hystrix-->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-hystrix</artifactId>
+        <version>1.3.4.RELEASE</version>
       </dependency>
       <dependency>
         <groupId>junit</groupId>

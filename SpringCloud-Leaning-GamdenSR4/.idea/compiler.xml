@@ -13,7 +13,9 @@
         <module name="consumer-movie-feign-manual" />
         <module name="consumer-movie-ribbon-customizing" />
         <module name="consumer-movie-ribbon-customizing-properties" />
+        <module name="consumer-movie-ribbon-hystrix" />
         <module name="consumer-movie-without-eureka" />
+        <module name="discovery-eureka" />
         <module name="eureka-server" />
         <module name="provider-user" />
         <module name="provider-user-with-auth" />
