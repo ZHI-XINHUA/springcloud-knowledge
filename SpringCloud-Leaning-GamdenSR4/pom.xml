@@ -28,8 +28,10 @@
       <module>consumer-movie-feign</module>
       <module>consumer-movie-feign-customizing</module>
       <module>provider-user-with-auth</module>
+      <module>provider-user-my-metadata</module>
       <module>consumer-movie-feign-manual</module>
 	  <module>consumer-movie-ribbon-hystrix</module>
+      <module>consumer-movie-understanding-metadata</module>
     </modules>
 
     <name>microserver-parent</name>
@@ -70,6 +72,11 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-eureka</artifactId>
+        <version>1.4.3.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
         <version>1.4.3.RELEASE</version>
       </dependency>
       <dependency>

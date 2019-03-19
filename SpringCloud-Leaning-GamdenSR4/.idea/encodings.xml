@@ -10,12 +10,14 @@
     <file url="file://$PROJECT_DIR$/consumer-movie-ribbon-customizing" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-movie-ribbon-customizing-properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-movie-understanding-metadata" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-movie-without-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/discovery-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/discovery-eureka-auth" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server-ha" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-user-my-metadata" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider-user-with-auth" charset="UTF-8" />
   </component>
 </project>

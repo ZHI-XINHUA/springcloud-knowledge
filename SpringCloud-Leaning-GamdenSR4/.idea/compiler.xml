@@ -14,11 +14,13 @@
         <module name="consumer-movie-ribbon-customizing" />
         <module name="consumer-movie-ribbon-customizing-properties" />
         <module name="consumer-movie-ribbon-hystrix" />
+        <module name="consumer-movie-understanding-metadata" />
         <module name="consumer-movie-without-eureka" />
         <module name="discovery-eureka" />
         <module name="discovery-eureka-auth" />
         <module name="eureka-server-ha" />
         <module name="provider-user" />
+        <module name="provider-user-my-metadata" />
         <module name="provider-user-with-auth" />
       </profile>
     </annotationProcessing>

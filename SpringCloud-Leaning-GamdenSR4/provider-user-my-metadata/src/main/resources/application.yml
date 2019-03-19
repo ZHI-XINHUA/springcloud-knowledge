@@ -2,7 +2,7 @@ server:
   port: 8082
 spring:
   application:
-    name: provider-user
+    name: provider-user-my-metadata
   datasource:
     url: jdbc:mysql://192.168.3.108:3306/microserver?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
     username: root
@@ -27,3 +27,6 @@ eureka:
     prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
     #ip-address: 127.0.0.1
     instance-id: ${spring.application.name}:${server.port}
+    metadata-map:  #自定义元数据，key/value形式
+      name: metadata
+      msg: metadata-map test

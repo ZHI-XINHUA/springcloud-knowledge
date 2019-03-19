@@ -262,3 +262,138 @@ eureka:
 
 
 
+## 五、Eureka元数据
+
+Eureka的元数据有两种：标准元数据和自定义元数据
+
+- 标准元数据：指的是主机名、IP地址、端口号、状态页和健康检查等信息，这些信息都会被发布在服务注册表中，用于服务之间的调用。
+- 自定义元数据：可以使用`eureka.instance.metadata-map`配置
+
+
+
+demo：`provider-user-my-metadata`、`consumer-movie-understanding-metadata`
+
+
+
+### 1、在user微服务添加自定义元数据
+
+application.yml:
+
+```yaml
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/
+  instance:
+    prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
+    #ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
+    metadata-map:  #自定义元数据，key/value形式
+      name: metadata
+      msg: metadata-map test
+```
+
+- metadata-map是可以key/value集合
+
+  ```yaml
+  metadata-map:  #自定义元数据，key/value形式
+        name: metadata
+        msg: metadata-map test
+  ```
+
+  
+
+### 在movie微服务中访问
+
+```java
+@RestController
+@RequestMapping("/movie")
+public class MovieController {
+
+    @Autowired
+    private DiscoveryClient discoveryClient;
+
+
+    /**
+     * 查询provider-user-my-metadata服务的信息
+     * @return
+     */
+    @GetMapping("/user-instance")
+    public List<ServiceInstance> showInfo(){
+        return discoveryClient.getInstances("provider-user-my-metadata");
+    }
+}
+```
+
+
+
+访问：http://localhost:9092/movie/user-instance
+
+![](./img/2.png)
+
+
+
+## 六、自我保护模式
+
+![](./img/3.png)
+
+
+
+默认情况下，如果Eureka Server在一定时间内没有接收到某个微服务实例的心态，Eureka Server将会注销该实例（默认90s）。但是当网络分区故障发生时，微服务与Eureka Server之间无法正常通信（这时候行为可能变得危险，因为微服务本身其实是健康的，此时不应该注销这个微服务）。
+
+Eureka通过“自我保护模式”来解决这个问题：当Eureka Server节点在短时间内丢失过多客户端时（可能发送了网络分区故障），那么这个节点就会进入自我保护模式。一旦进入该模式，Eureka Server就会保护服务注册表中的信息，不在删除服务注册表中的数据（也就是不会注销任何微服务）。当网络故障恢复后，该Eureka Server节点会自动退出自我保护模式。
+
+禁用自我保护模式的方法,`enable-self-preservation=false`，如下：
+
+```yaml
+eureka:
+    server:
+        enable-self-preservation: false
+```
+
+
+
+ps:使用自我保护模式，让Eureka集群更加健壮、稳定。生产环境建议不禁用。
+
+
+
+
+
+## 七、Eureka健康检查
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
