@@ -33,6 +33,7 @@
       <module>consumer-movie-ribbon</module>
 	  <module>consumer-movie-ribbon-hystrix</module>
       <module>consumer-movie-understanding-metadata</module>
+      <module>consumer-movie-feign-hystrix-fallback</module>
     </modules>
 
     <name>microserver-parent</name>

@@ -10,6 +10,7 @@
         <module name="consumer-movie" />
         <module name="consumer-movie-feign" />
         <module name="consumer-movie-feign-customizing" />
+        <module name="consumer-movie-feign-hystrix-fallback" />
         <module name="consumer-movie-feign-manual" />
         <module name="consumer-movie-ribbon" />
         <module name="consumer-movie-ribbon-customizing" />
