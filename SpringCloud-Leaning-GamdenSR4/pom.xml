@@ -30,6 +30,7 @@
       <module>provider-user-with-auth</module>
       <module>provider-user-my-metadata</module>
       <module>consumer-movie-feign-manual</module>
+      <module>consumer-movie-ribbon</module>
 	  <module>consumer-movie-ribbon-hystrix</module>
       <module>consumer-movie-understanding-metadata</module>
     </modules>

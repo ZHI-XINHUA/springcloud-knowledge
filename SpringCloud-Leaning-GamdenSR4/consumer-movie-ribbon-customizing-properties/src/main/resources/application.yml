@@ -15,7 +15,7 @@ eureka:
     ip-address: 127.0.0.1
     instance-id: ${spring.application.name}:${server.port}
 
-# 自定riddon的负载规则为随机（RandomRule）
-provider-user:
-  ribbon:
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+  # 自定riddon的负载规则为随机（RandomRule）
+  provider-user: # 调用的服务名称
+    ribbon:
+      NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
