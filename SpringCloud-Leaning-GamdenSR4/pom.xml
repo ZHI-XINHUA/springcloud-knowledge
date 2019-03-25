@@ -34,6 +34,9 @@
 	  <module>consumer-movie-ribbon-hystrix</module>
       <module>consumer-movie-understanding-metadata</module>
       <module>consumer-movie-feign-hystrix-fallback</module>
+      <module>consumer-movie-feign-hystrix-fallback-stream</module>
+      <module>hystrix-dashboard</module>
+      <module>hystrix-turbine</module>
     </modules>
 
     <name>microserver-parent</name>
@@ -80,6 +83,16 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-actuator</artifactId>
         <version>1.4.3.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+        <version>1.4.3.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
+        <version>1.4.0.RELEASE</version>
       </dependency>
       <dependency>
         <groupId>junit</groupId>

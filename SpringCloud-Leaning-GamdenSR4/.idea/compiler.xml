@@ -11,6 +11,7 @@
         <module name="consumer-movie-feign" />
         <module name="consumer-movie-feign-customizing" />
         <module name="consumer-movie-feign-hystrix-fallback" />
+        <module name="consumer-movie-feign-hystrix-fallback-stream" />
         <module name="consumer-movie-feign-manual" />
         <module name="consumer-movie-ribbon" />
         <module name="consumer-movie-ribbon-customizing" />
@@ -21,6 +22,8 @@
         <module name="discovery-eureka" />
         <module name="discovery-eureka-auth" />
         <module name="eureka-server-ha" />
+        <module name="hystrix-dashboard" />
+        <module name="hystrix-turbine" />
         <module name="provider-user" />
         <module name="provider-user-my-metadata" />
         <module name="provider-user-with-auth" />

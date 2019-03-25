@@ -14,7 +14,6 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients //开启Feign
-
 public class ConsumerMovieFeignHystrixApp
 {
 

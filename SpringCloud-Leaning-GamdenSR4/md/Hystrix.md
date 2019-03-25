@@ -50,6 +50,21 @@ Hystrix是由Netflix开源的一个延迟和容错库，用于隔离访问远程
 
   
 
+  ### Hystrix的隔离策略
+
+  Hystrix两种隔离测试：
+
+  - THREAD(线程隔离)：使用该方式，HystrixCommand将会在单独的线程上执行，并发请求受线程池中的线程数据的限制。
+  - SEMAPHONRE（信号量隔离）：使用该方式，HystrixCommand将会在调用线程上执行，开销相对较小，并发请求受到信号量个数的限制。
+
+  Hystrix中默认并且推荐使用线程隔离，因为这种方式有一个除网络超时外的额外保护层。
+
+  一般来说，只有当调用负载非常高时（如每个实例每秒调用数百次）才需要使用信号隔离，因为这种场景下使用线程隔离开始比较高。信号量隔离一般仅使用于非网络调用的隔离。
+
+  
+
+  
+
 ## 一、简单使用Hystrix
 
 项目demo：`consumer-movie-ribbon-hystrix`
@@ -132,9 +147,195 @@ public class MovieController {
 
 
 
-## 二、Actuator监控Hystrix
+## 二、Feign使用Hystrix
 
-### 1、添加Actuator依赖
+上面是使用注解`@HystrixCommand`的`fallbackMethod`属性实现回退的。但是Feign是以接口形式工作的，没有方法体，所以上面的方式不适用于Fegin。
+
+Spring Cloud 默认为Fegin整合了Hystrix，只要Hystrix在项目的classpath中，Fegin默认就会用断路器包裹所有方法。
+
+
+
+### （1）方式一：使用fallback指定回退类
+
+项目demo：`consumer-movie-feign-hystrix-fallback`
+
+#### 1、修改Fegin接口，属性fallback指定回退类
+
+```java
+/**
+ *feign 接口，调用provider-user服务,fallback指定容错回退类
+ */
+@FeignClient(name = "provider-user",fallback = FeginClientFallback.class)
+public interface UserFeignClient {
+
+    @RequestMapping(value = "/user/{userId}",method = RequestMethod.GET)
+    User findUser(@PathVariable("userId") String userId); //坑1：注意@PathVariable 要添加value值
+
+}
+```
+
+
+
+#### 2、编写容错回退类，实现Fegin接口
+
+```java
+/**
+ * 回退类FeginClientFallBack需要实现Fegin Client接口
+ */
+@Component
+public class FeginClientFallback implements  UserFeignClient{
+
+    @Override
+    public User findUser(String userId) {
+        User user = new User();
+        user.setUserId("-1");
+        user.setUserCode("-1");
+        user.setUserName("Fegin--> 找不到用户");
+        return  user;
+    }
+}
+```
+
+注意：记得添加`@Component`注解。
+
+
+
+#### 3、如果是Spring Cloud Dalston之后版本，需要开启Hystrix
+
+application.yml开启hystrix
+
+```yacas
+feign:
+  hystrix:
+    enabled: true
+```
+
+说明：从Spring Cloud Dalston开始，Feign默认是不开启Hystrix的。
+因此，如使用Dalston请务必额外设置属性：feign.hystrix.enabled=true，否则断路器不会生效。
+而，Spring Cloud Angel/Brixton/Camden中，Feign默认都是开启Hystrix的。无需设置该属性。
+
+
+
+至此，Fegin完成了Hystrix容错机制。
+
+
+
+### （2）方式二：通过Fallback Factory 检查回退原因
+
+使用fallback Factory与fallback不同的是，前者可以获取回退的原因。
+
+项目demo：`consumer-movie-feign-hystrix-fallback`
+
+#### 1、修改Fegin接口，属性fallbackFactory指定回退类
+
+```java
+/**
+ * 使用fallbackFactory实现容错
+ */
+@FeignClient(name = "provider-user",fallbackFactory =FeginClientFallbackFactory.class )
+public interface UserFeginClient2 {
+    @RequestMapping(value = "/user/{userId}",method = RequestMethod.GET)
+    User findUser(@PathVariable("userId") String userId); //坑1：注意@PathVariable 要添加value值
+}
+
+```
+
+
+
+#### 2、编写回退工厂类，实现FallbackFactory接口，并覆写create方法（实现Fegin接口的方法）
+
+```java
+/**
+ * fallback 容错工厂类，实现FallbackFactory接口，并覆写create方法（实现Fegin接口的方法）
+ */
+@Component
+public class FeginClientFallbackFactory implements FallbackFactory<UserFeginClient2> {
+
+    @Override
+    public UserFeginClient2 create(Throwable throwable) {
+        //简单打印错误信息
+        //Fegin bug: throwable 可能为null
+        // 在Spring Cloud Gamden SR4使用的Fegin版本是9.3.1. Fegin 9.4.0才修改修改throwabel为null的bug
+        System.out.println(throwable.getMessage());
+
+        //实现Fegin接口，返回容错的信息
+        return new UserFeginClient2(){
+
+            @Override
+            public User findUser(String userId) {
+                User user = new User();
+                user.setUserId("-1");
+                user.setUserCode("-1");
+                user.setUserName("Fegin fallbackFactory --> 找不到用户");
+                return  user;
+            }
+        };
+
+
+    }
+}
+
+```
+
+create方法有异常参数Throwable，可以获取异常信息
+
+
+
+#### 3、如果是Spring Cloud Dalston之后版本，需要开启Hystrix
+
+application.yml开启hystrix
+
+```yacas
+feign:
+  hystrix:
+    enabled: true
+```
+
+
+
+
+
+### （3）为Fegin禁用Hystrix
+
+Spring Cloud 默认为Fegin整合了Hystrix。但是很多场景并不需要该功能。如何禁用Hystrix？
+
+
+
+#### 为指定Fegin客户端禁用Hystrix
+
+
+
+
+
+#### 全局禁用Hystrix
+
+```yacas
+feign:
+  hystrix:
+    enabled: false
+```
+
+
+
+
+
+
+
+## 三、Hystrix监控
+
+除了容错外，Hystrix还提供了近乎实时的监控。`HystrixCommand`和`HystrixObservableCommand`在执行时，会生成执行结果和运行指标，必然每秒执行的请求数、成功数等，这些监控数据对分析应用系统的状态很有用。
+
+
+
+使用Hystrix的模块`hystrix-metrics-event-stream`，就饿开业将这些监控的指标信息以text/event-stream的格式暴露给外部系统。`spring-cloud-starter-hystrix`已包含该模块，在此基础上，只需为项目添加`spring-boot-starter-actuator`就可以使用/hystrix.stream端点获得Hystrix的监控信息了。
+
+
+
+
+
+### （1）项目添加监控
+
+添加Actuator依赖
 
 ```xml
  <dependency>
@@ -162,7 +363,7 @@ Hystrix状态为UP，也就是一切正常，此时断路器是关闭的。
 
 
 
-停止provider-user服务后，Hystrix状态信息为
+停止provider-user服务后，5分钟返回20此失败，Hystrix状态信息为
 
 ```xml
 {
@@ -178,9 +379,150 @@ Hystrix状态为UP，也就是一切正常，此时断路器是关闭的。
 
 
 
+访问http://localhost:6001/hystrix.stream  系统会不断刷新获得实时的监控数据。
+
+![](./img/6.png)
 
 
 
+### （2）Fegin添加监控
+
+项目demo：`consumer-movie-feign-hystrix-fallback-stream`
+
+Fegin 添加Actuator监控，访问/health 可以看到hystrix状态。 
+
+但是访问/hystrix.stream 显示404
+
+http://localhost:7001/hystrix.stream
+
+![](./img/7.png)
+
+
+
+**解决方案：**
+
+#### 1、除添加Actuator依赖外，增加hystrix依赖
+
+```xml
+<!--fegin监控 需要添加hystrix-->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-hystrix</artifactId>
+</dependency>
+```
+
+
+
+#### 2、启动类添加注解`@EnableCircuitBreaker`
+
+```java
+@SpringBootApplication
+@EnableEurekaClient
+@EnableFeignClients //开启Feign
+@EnableCircuitBreaker //开启断路器
+public class ConsumerMovieFeignHystrixStreamApp
+{
+
+    public static void main( String[] args )
+    {
+        SpringApplication.run(ConsumerMovieFeignHystrixStreamApp.class,args);
+    }
+}
+```
+
+
+
+重新启动项目即可 访问http://localhost:7001/hystrix.stream监控
+
+
+
+## 四、使用Hystrix Dashboard可视化监控数据
+
+前面应用了Hystrix的监控，但是访问/hystrix.stream端点的数据是以文字形式展示的。很难分析这些数据。
+
+下面使用Hystrix Dashboard，让监控数据图形化、可视化
+
+
+
+项目demo：`hystrix-dashboard`
+
+### 1、新建maven项目，添加依赖
+
+```xml
+ <dependencies>
+     <dependency>
+         <groupId>org.springframework.cloud</groupId>
+         <artifactId>spring-cloud-starter-hystrix</artifactId>
+     </dependency>
+     <dependency>
+         <groupId>org.springframework.cloud</groupId>
+
+         <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+     </dependency>
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-actuator</artifactId>
+     </dependency>
+</dependencies>
+```
+
+
+
+### 2、启动类添加`@EnableHystrixDashboard `
+
+```java
+/**
+ * HystrixDashboard 服务
+ */
+@SpringBootApplication
+@EnableHystrixDashboard //开启dashboard
+public class HystrixDashboardApp
+{
+    public static void main( String[] args )
+    {
+        SpringApplication.run(HystrixDashboardApp.class,args);
+    }
+}
+```
+
+
+
+### 3、设置端口
+
+```yaml
+server:
+  port: 8030
+```
+
+
+
+启动范围：http://localhost:8030/hystrix
+
+![](./img/8.png)
+
+
+
+上一节中访问http://localhost:7001/hystrix.stream 监控hystrix，文字方式呈现。
+
+![](./img/9.png)
+
+
+
+不断访问被监控的服务，hystrix bashboard的监控显示如下：
+
+![](./img/10.png)
+
+## 五、使用Turbine聚合监控数据
+
+前文中使用/hystrix.stream端点监控单个微服务实例。然而，使用微服务的应用系统一般会包含若干个微服务，每个微服务通常都会部署多个实例。如果每次只能查看单个实例的监控，需要在Hystrix Dashboard上切换要监控的地址，这样很不方便。 
+
+准对上述问题，使用Turbine监控工具。
+
+> Turbine 是一个聚合Hystrix监控数据的工具，它可将所有相关/hystrix.stream端点的数据聚合到一个组合的/turbine.stream中，从而让集群的监控更加方便。
+
+
+
+### 使用Turbine监控多个微服务
 
 
 
