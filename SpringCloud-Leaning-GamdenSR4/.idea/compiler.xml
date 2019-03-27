@@ -17,6 +17,7 @@
         <module name="consumer-movie-ribbon-customizing" />
         <module name="consumer-movie-ribbon-customizing-properties" />
         <module name="consumer-movie-ribbon-hystrix" />
+        <module name="consumer-movie-ribbon-hystrix-mq" />
         <module name="consumer-movie-understanding-metadata" />
         <module name="consumer-movie-without-eureka" />
         <module name="discovery-eureka" />
@@ -24,6 +25,7 @@
         <module name="eureka-server-ha" />
         <module name="hystrix-dashboard" />
         <module name="hystrix-turbine" />
+        <module name="hystrix-turbine-mq" />
         <module name="provider-user" />
         <module name="provider-user-my-metadata" />
         <module name="provider-user-with-auth" />

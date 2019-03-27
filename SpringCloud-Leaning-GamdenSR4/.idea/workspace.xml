@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe31efa6-5f1a-48f8-a6f9-0c4f63375b37" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/hystrix-turbine-mq/src/main/java/cloud/HystrixTurbineMqApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hystrix-turbine/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hystrix-turbine/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/provider-user/target/" />
@@ -28,6 +31,8 @@
     <ignored path="$PROJECT_DIR$/consumer-movie-feign-hystrix-fallback-stream/target/" />
     <ignored path="$PROJECT_DIR$/hystrix-dashboard/target/" />
     <ignored path="$PROJECT_DIR$/hystrix-turbine/target/" />
+    <ignored path="$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/target/" />
+    <ignored path="$PROJECT_DIR$/hystrix-turbine-mq/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,24 +42,16 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="48" />
+            <state relative-caret-position="154">
+              <caret line="109" column="10" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
             </state>
           </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix/src/main/java/cloud/ConsumerMovieApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hystrix-turbine/src/main/java/cloud/HystrixTurbineApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
@@ -75,48 +72,49 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer-movie-feign-hystrix-fallback-stream/src/main/java/cloud/ConsumerMovieFeignHystrixStreamApp.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hystrix-turbine/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="35" column="21" selection-start-line="32" selection-start-column="7" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="114">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer-movie-feign-hystrix-fallback-stream/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+            <state relative-caret-position="-3">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hystrix-dashboard/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/hystrix-turbine-mq/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="1" selection-end-column="12" />
+            <state relative-caret-position="228">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hystrix-dashboard/src/main/java/cloud/HystrixDashboardApp.java">
+        <entry file="file://$PROJECT_DIR$/hystrix-turbine-mq/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="241">
+              <caret line="31" column="21" selection-start-line="24" selection-start-column="7" selection-end-line="31" selection-end-column="21" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hystrix-turbine-mq/src/main/java/cloud/HystrixTurbineMqApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,13 +123,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-turbine/1.4.0.RELEASE/spring-cloud-netflix-turbine-1.4.0.RELEASE.jar!/org/springframework/cloud/netflix/turbine/TurbineProperties.class">
+        <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/src/main/java/cloud/ConsumerMovieRibbonHystrixMqApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            <state relative-caret-position="152">
+              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.4.3.RELEASE/spring-boot-autoconfigure-1.4.3.RELEASE.jar!/org/springframework/boot/autoconfigure/amqp/RabbitProperties.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="137" column="16" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
               <folding>
-                <element signature="e#1407#1408#0" expanded="true" />
-                <element signature="e#1449#1450#0" expanded="true" />
+                <element signature="e#4547#4548#0" expanded="true" />
+                <element signature="e#4587#4588#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,9 +201,15 @@
         <option value="$PROJECT_DIR$/hystrix-dashboard/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/hystrix-dashboard/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix-turbine/src/main/java/cloud/HystrixTurbineApp.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix-turbine/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix-turbine/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix-turbine-mq/src/main/java/cloud/HystrixTurbineMqApp.java" />
+        <option value="$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/src/main/java/cloud/ConsumerMovieRibbonHystrixMqApp.java" />
+        <option value="$PROJECT_DIR$/hystrix-turbine-mq/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/hystrix-turbine-mq/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/pom.xml" />
       </list>
     </option>
   </component>
@@ -235,25 +248,25 @@
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-feign-hystrix-fallback-stream" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-movie-ribbon-hystrix-mq" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-feign-hystrix-fallback-stream" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-movie-ribbon-hystrix-mq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-feign-hystrix-fallback-stream" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-movie-ribbon-hystrix-mq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-feign-hystrix-fallback-stream" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-movie-ribbon-hystrix-mq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -261,7 +274,7 @@
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-feign-hystrix-fallback-stream" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-movie-ribbon-hystrix-mq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -270,7 +283,50 @@
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-feign-hystrix-fallback-stream" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-movie-ribbon-hystrix-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
+              <item name="hystrix-turbine-mq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
+              <item name="hystrix-turbine-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
+              <item name="hystrix-turbine-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
+              <item name="hystrix-turbine-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
+              <item name="hystrix-turbine-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
+              <item name="hystrix-turbine-mq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -293,7 +349,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553669468716" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553685421005" />
     <property name="last_opened_file_path" value="E:/github_pro_3/spring-cloud-docker-microservice-book-code-master" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -316,29 +372,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.HystrixTurbineApp">
-    <configuration name="ConsumerMovieApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cloud.ConsumerMovieApp" />
-      <module name="consumer-movie-ribbon-hystrix" />
+  <component name="RunManager" selected="Application.ConsumerMovieRibbonHystrixMqApp">
+    <configuration name="ConsumerMovieRibbonHystrixMqApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cloud.ConsumerMovieRibbonHystrixMqApp" />
+      <module name="consumer-movie-ribbon-hystrix-mq" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cloud.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsumerMovieFeignHystrixApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="consumer-movie-feign-hystrix-fallback" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cloud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cloud.ConsumerMovieFeignHystrixApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -352,6 +395,19 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="cloud.ConsumerMovieFeignHystrixStreamApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerMovieRibbonHystrixMqApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="consumer-movie-ribbon-hystrix-mq" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cloud.ConsumerMovieRibbonHystrixMqApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -421,23 +477,23 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ConsumerMovieApp" />
       <item itemvalue="Spring Boot.provider-8082" />
       <item itemvalue="Spring Boot.provider-8083" />
       <item itemvalue="Spring Boot.eureka-8761" />
       <item itemvalue="Spring Boot.eureka-8762" />
-      <item itemvalue="Spring Boot.ConsumerMovieFeignHystrixApp" />
       <item itemvalue="Spring Boot.ConsumerMovieFeignHystrixStreamApp" />
       <item itemvalue="Spring Boot.HystrixDashboardApp" />
       <item itemvalue="Spring Boot.HystrixTurbineApp" />
+      <item itemvalue="Spring Boot.ConsumerMovieRibbonHystrixMqApp" />
+      <item itemvalue="Application.ConsumerMovieRibbonHystrixMqApp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConsumerMovieRibbonHystrixMqApp" />
+        <item itemvalue="Spring Boot.ConsumerMovieRibbonHystrixMqApp" />
         <item itemvalue="Spring Boot.HystrixTurbineApp" />
         <item itemvalue="Spring Boot.ConsumerMovieFeignHystrixStreamApp" />
         <item itemvalue="Spring Boot.HystrixDashboardApp" />
-        <item itemvalue="Application.ConsumerMovieApp" />
-        <item itemvalue="Spring Boot.ConsumerMovieFeignHystrixApp" />
       </list>
     </recent_temporary>
   </component>
@@ -456,12 +512,12 @@
       <workItem from="1553130455436" duration="12762000" />
       <workItem from="1553217209526" duration="15580000" />
       <workItem from="1553477233236" duration="914000" />
-      <workItem from="1553649595313" duration="4089000" />
+      <workItem from="1553649595313" duration="8377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49286000" />
+    <option name="totallyTimeSpent" value="53574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -480,7 +536,7 @@
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.2753825" />
+      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.49513212" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.2290185" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -519,58 +575,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-eureka-server/1.3.4.RELEASE/spring-cloud-starter-eureka-server-1.3.4.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="37" column="21" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="37" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/ConsumerMovieApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/controller/MovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.2.2/ribbon-loadbalancer-2.2.2.jar!/com/netflix/loadbalancer/ZoneAvoidanceRule.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.2.2/ribbon-loadbalancer-2.2.2.jar!/com/netflix/loadbalancer/IRule.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.2.2/ribbon-loadbalancer-2.2.2.jar!/com/netflix/loadbalancer/RoundRobinRule.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#2868#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-core/1.3.4.RELEASE/spring-cloud-netflix-core-1.3.4.RELEASE.jar!/org/springframework/cloud/netflix/ribbon/RibbonClientConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -812,14 +816,6 @@
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1862">
-          <caret line="98" column="38" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/hystrix-dashboard/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -911,6 +907,72 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="109" column="10" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hystrix-turbine-mq/src/main/java/cloud/HystrixTurbineMqApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hystrix-turbine-mq/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hystrix-turbine-mq/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="31" column="21" selection-start-line="24" selection-start-column="7" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.4.3.RELEASE/spring-boot-autoconfigure-1.4.3.RELEASE.jar!/org/springframework/boot/autoconfigure/amqp/RabbitProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="137" column="16" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
+          <folding>
+            <element signature="e#4547#4548#0" expanded="true" />
+            <element signature="e#4587#4588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/src/main/java/cloud/ConsumerMovieRibbonHystrixMqApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
   </component>
   <component name="masterDetails">
