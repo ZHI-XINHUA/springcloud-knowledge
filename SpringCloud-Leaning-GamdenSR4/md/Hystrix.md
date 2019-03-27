@@ -514,6 +514,8 @@ server:
 
 ## 五、使用Turbine聚合监控数据
 
+### 1、Turbine简介
+
 前文中使用/hystrix.stream端点监控单个微服务实例。然而，使用微服务的应用系统一般会包含若干个微服务，每个微服务通常都会部署多个实例。如果每次只能查看单个实例的监控，需要在Hystrix Dashboard上切换要监控的地址，这样很不方便。 
 
 准对上述问题，使用Turbine监控工具。
@@ -522,13 +524,119 @@ server:
 
 
 
-### 使用Turbine监控多个微服务
+
+
+### 2、使用Turbine监控多个微服务
+
+架构如下：
+
+![](./img/13.png)
+
+
+
+#### 第一步：编写一个Turbine项目
+
+项目：`hystrix-turbine`
+
+##### （1）maven 引入turbine 
+
+```xml
+<dependency>
+     <groupId>org.springframework.cloud</groupId>
+     <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
+</dependency>
+```
+
+
+
+##### （2）编写application.yml，添加监控的微服务
+
+```yaml
+server:
+  port: 8031
+spring:
+  application:
+    name: hystrix-turbine
+
+# 注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+turbine:
+  cluster-name-expression: "'default'"
+  app-config: consumer-movie-ribbon-hystrix,consumer-movie-feign-hystrix-fallback-stream #监控的微服务
+```
+
+- `turbine.app-config`：监听的微服务，对应在注册中心的名字。注意：监听的微服务必须是实现了Hystrix监控的程序，即可要访问/hystrix.stream> 文字监控
+
+
+
+##### （3）在启动类中添加@EnableTurbine注解
+
+```java
+/**
+ * HystrixDashboard 服务
+ */
+@SpringBootApplication
+@EnableTurbine
+public class HystrixTurbineApp
+{
+    public static void main( String[] args )
+    {
+        SpringApplication.run(HystrixTurbineApp.class,args);
+    }
+}
+
+```
+
+
+
+#### 第二步、依次启动服务
+
+1、启动注册中心：`eureka-server-ha`
+
+2、启动服务提供者：`provider-user`
+
+3、启动需要监控的消费者：`consumer-movie-ribbon-hystrix`、`consumer-movie-feign-hystrix-fallback-stream`
+
+​        访问<http://localhost:6001/hystrix.stream>  和 <http://localhost:6002/hystrix.stream>  会输出文字形式的监控数据
+
+![](./img/14.png)
+
+
+
+4、启动Turbine监控程序：`hystrix-turbine`  
+
+​        访问<http://localhost:8031/turbine.stream> ，会输出第三步的监控组合数据
+
+![](./img/15.png)
+
+
+
+5、启动Hystrix Dashboard监控程序：`hystrix-dashboard`
+
+​      访问http://localhost:8030/hystrix.stream 出现监控界面，如下
+
+![](./img/8.png)
+
+
+
+监控地址填写turbine程序的监控地址：<http://localhost:8031/turbine.stream>，设置delay和title后 进去监控，效果如下：
+
+![](./img/12.png)
 
 
 
 
 
 
+
+### 3、使用消息中间件收集数据监控
+
+如果微服务与Turbine网络不通的情况下，上面的方式是无法正常监控的。 为了解决这问题，可借助消息中间件实现数据收集。各个微服务将Hystrix Command的监控数据发送至消息中间件，Turbine消费消息中间件中的数据。
 
 
 
