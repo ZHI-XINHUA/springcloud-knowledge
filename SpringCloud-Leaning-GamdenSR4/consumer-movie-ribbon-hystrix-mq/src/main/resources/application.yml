@@ -9,7 +9,7 @@ spring:
     username: guest
     password: guest
 
-spring.cloud.
+
 eureka:
   client:
     register-with-eureka: true

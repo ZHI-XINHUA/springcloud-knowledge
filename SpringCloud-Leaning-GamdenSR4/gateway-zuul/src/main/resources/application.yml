@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: gateway-zuul
+server:
+  port: 8040
+
+# eureka 配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka #Eureka Server交互地址，查询服务和注册服务都需要依赖这个地址，多个用逗号分隔。
+  instance:
+    prefer-ip-address: true
+
+
+zuul:
+  routes:
+    user-route:  # user-route只是给路由一个名称，可以任意起名
+      url: http://localhost:8000/ # 指定的url
+      path: /provider-user/user/**  #service-id对应的路径
+

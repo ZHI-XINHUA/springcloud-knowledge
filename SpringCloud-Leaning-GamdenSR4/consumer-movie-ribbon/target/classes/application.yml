@@ -1,14 +1,8 @@
 server:
-  port: 6002
+  port: 9092
 spring:
   application:
-    name: consumer-movie-ribbon-hystrix-mq
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-
+    name: consumer-movie-ribbon
 
 eureka:
   client:

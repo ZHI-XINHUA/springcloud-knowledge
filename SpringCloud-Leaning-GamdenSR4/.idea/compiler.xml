@@ -23,6 +23,7 @@
         <module name="discovery-eureka" />
         <module name="discovery-eureka-auth" />
         <module name="eureka-server-ha" />
+        <module name="gateway-zuul" />
         <module name="hystrix-dashboard" />
         <module name="hystrix-turbine" />
         <module name="hystrix-turbine-mq" />

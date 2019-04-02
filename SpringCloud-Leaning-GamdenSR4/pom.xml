@@ -7,7 +7,8 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.4.3.RELEASE</version>
+  <!--  <version>1.4.3.RELEASE</version>-->
+    <version>1.5.9.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
@@ -39,6 +40,7 @@
       <module>hystrix-turbine</module>
       <module>consumer-movie-ribbon-hystrix-mq</module>
       <module>hystrix-turbine-mq</module>
+      <module>gateway-zuul</module>
     </modules>
 
     <name>microserver-parent</name>
@@ -69,48 +71,49 @@
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-actuator</artifactId>
+        <version>1.4.3.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        <version>1.4.0.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+        <version>1.4.0.RELEASE</version>
       </dependency>
       <!--hystrix-->
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-hystrix</artifactId>
-        <version>1.3.4.RELEASE</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-eureka</artifactId>
-        <version>1.4.3.RELEASE</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-actuator</artifactId>
-        <version>1.4.3.RELEASE</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
-        <version>1.4.3.RELEASE</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
-        <version>1.4.0.RELEASE</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-netflix-hystrix-stream</artifactId>
-        <version>1.4.0.RELEASE</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
-        <version>1.3.4.RELEASE</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-netflix-turbine-stream</artifactId>
-        <version>1.4.0.RELEASE</version>
-      </dependency>
+         <dependency>
+           <groupId>org.springframework.cloud</groupId>
+           <artifactId>spring-cloud-starter-hystrix</artifactId>
+           <version>1.3.4.RELEASE</version>
+         </dependency>
+         <dependency>
+           <groupId>org.springframework.cloud</groupId>
+           <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+           <version>1.4.3.RELEASE</version>
+         </dependency>
+         <dependency>
+           <groupId>org.springframework.cloud</groupId>
+           <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
+           <version>1.4.0.RELEASE</version>
+         </dependency>
+         <dependency>
+           <groupId>org.springframework.cloud</groupId>
+           <artifactId>spring-cloud-netflix-hystrix-stream</artifactId>
+           <version>1.4.0.RELEASE</version>
+         </dependency>
+         <dependency>
+           <groupId>org.springframework.cloud</groupId>
+           <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+           <version>1.3.0.RELEASE</version>
+         </dependency>
+         <dependency>
+           <groupId>org.springframework.cloud</groupId>
+           <artifactId>spring-cloud-starter-netflix-turbine-stream</artifactId>
+           <version>1.4.0.RELEASE</version>
+         </dependency>
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
@@ -120,8 +123,7 @@
     </dependencies>
   </dependencyManagement>
 
-  <dependencies>
-  </dependencies>
+
 
 
 </project>
