@@ -16,6 +16,19 @@ eureka:
 zuul:
   routes:
     user-route:  # user-route只是给路由一个名称，可以任意起名
-      url: http://localhost:9092/ # 指定的url
-      path: /api/**  # url对应的路径。
+      path: /api/**  # service-id映射的路径。
+      service-id: consumer-movie_my  #自定义一个service-id
 
+# 为Ribbon禁用Eureka
+ribbon:
+  eureka:
+    enabled: false
+
+# 自定义servie-id的ribbon
+consumer-movie_my:
+  ribbon:
+    listOfServers: localhost:9092,localhost:9093
+
+management:
+  security:
+    enabled: false

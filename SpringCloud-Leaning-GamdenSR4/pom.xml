@@ -41,6 +41,7 @@
       <module>consumer-movie-ribbon-hystrix-mq</module>
       <module>hystrix-turbine-mq</module>
       <module>gateway-zuul</module>
+      <module>gateway-zuul-reg-exp</module>
     </modules>
 
     <name>microserver-parent</name>

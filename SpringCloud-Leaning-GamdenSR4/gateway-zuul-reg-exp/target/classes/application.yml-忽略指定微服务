@@ -12,18 +12,6 @@ eureka:
   instance:
     prefer-ip-address: true
 
-
-
-management:
-  security:
-    enabled: false
-
+# 忽略consumer-movie-ribbon服务，多个用逗号分隔
 zuul:
-  ignored-patterns: /**/admin/**  # 忽略所有包括/admin/的路径
-  routes:
-    consumer-movie-ribbon: /user/**
-
-
-logging:
-  level:
-    com.netflix: DEBUG
+  ignored-services: consumer-movie-ribbon

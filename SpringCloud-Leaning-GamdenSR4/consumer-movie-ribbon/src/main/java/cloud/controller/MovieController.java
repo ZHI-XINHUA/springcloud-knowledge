@@ -30,6 +30,11 @@ public class MovieController {
       return  restTemplate.getForObject("http://provider-user/user/"+userId,User.class);
     }
 
+    @GetMapping("/admin")
+    public String getAdmin(){
+        return "Admin";
+    }
+
     /**
      * 测试客户端负载均衡
      */

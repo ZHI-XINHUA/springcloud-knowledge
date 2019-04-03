@@ -12,7 +12,7 @@ eureka:
   instance:
     prefer-ip-address: true
 
-#consumer-movie-ribbon 微服务就会被映射到 /provider-user/user/**路径
+#consumer-movie-ribbon 微服务就会被映射到 /user/**路径
 zuul:
   routes:
-    consumer-movie-ribbon: /provider-user/user/**
+    consumer-movie-ribbon: /user/**

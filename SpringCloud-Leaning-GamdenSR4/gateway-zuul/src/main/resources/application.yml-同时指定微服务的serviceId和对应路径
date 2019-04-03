@@ -18,5 +18,5 @@ zuul:
   routes:
     user-route:  # user-route只是给路由一个名称，可以任意起名
       service-id: consumer-movie-ribbon #微服务id
-      path: /provider-user/user/**  #service-id对应的路径
+      path: /user/**  #service-id对应的路径
 

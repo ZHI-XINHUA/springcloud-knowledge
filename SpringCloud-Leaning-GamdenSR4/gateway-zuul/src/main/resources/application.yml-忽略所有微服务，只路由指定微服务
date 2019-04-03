@@ -15,6 +15,6 @@ eureka:
 # 忽略所有微服务，只路由指定微服务
 zuul:
   routes:
-    consumer-movie-ribbon: /provider-user/user/**
+    consumer-movie-ribbon: /user/**
   ignored-services: '*'
 

@@ -22,6 +22,7 @@ public class MovieController {
 
     @GetMapping("/{userId}")
     public User findUser(@PathVariable  String userId){
+        System.out.println("userId="+userId);
       return  restTemplate.getForObject("http://provider-user/user/"+userId,User.class);
     }
 
