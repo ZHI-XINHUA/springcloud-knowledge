@@ -42,6 +42,9 @@
       <module>hystrix-turbine-mq</module>
       <module>gateway-zuul</module>
       <module>gateway-zuul-reg-exp</module>
+      <module>file-upload</module>
+      <module>gateway-zuul-file-upload</module>
+      <module>gateway-zuul-filter</module>
     </modules>
 
     <name>microserver-parent</name>

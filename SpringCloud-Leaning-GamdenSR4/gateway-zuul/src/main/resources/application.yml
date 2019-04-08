@@ -18,12 +18,4 @@ management:
   security:
     enabled: false
 
-zuul:
-  ignored-patterns: /**/admin/**  # 忽略所有包括/admin/的路径
-  routes:
-    consumer-movie-ribbon: /user/**
 
-
-logging:
-  level:
-    com.netflix: DEBUG

@@ -12,10 +12,6 @@ eureka:
   instance:
     prefer-ip-address: true
 
-
-
-management:
-  security:
-    enabled: false
-
-
+# 忽略consumer-movie-ribbon服务，多个用逗号分隔
+zuul:
+  ignored-services: consumer-movie-ribbon

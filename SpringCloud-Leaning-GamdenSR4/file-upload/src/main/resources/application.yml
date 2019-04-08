@@ -1,0 +1,16 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: file-upload
+  http:
+    multipart:
+      max-file-size: 10Mb # 单个文件大小 默认1M
+      max-request-size: 15Mb # 总上传的数据大小 默认10M
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

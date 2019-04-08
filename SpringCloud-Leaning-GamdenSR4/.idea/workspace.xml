@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe31efa6-5f1a-48f8-a6f9-0c4f63375b37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/discovery-eureka/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-zuul-reg-exp/src/main/java/cloud/GatewayZuulRegExpApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-同时指定path和URL，并且不破坏Zuul的Hystrix、Ribbon特性" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-忽略某些路径" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-路由前缀" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/md/microserver.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-upload/src/main/java/cloud/FileUploadApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-upload/src/main/java/cloud/controller/FileUploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-zuul-file-upload/src/main/java/cloud/GatewayZuulFileUploadApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/ErrorRequestLogFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/PostRequestLogFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/PreRequestLogFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/RouteRequestLogFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer-movie-ribbon/target/classes/cloud/controller/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-movie-ribbon/target/classes/cloud/controller/MovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer-movie/src/main/java/cloud/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-movie/src/main/java/cloud/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-eureka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-eureka/src/main/resources/application.yml_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-eureka/target/classes/application.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-同时指定url和path" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-同时指定url和path" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-同时指定微服务的serviceId和对应路径" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-同时指定微服务的serviceId和对应路径" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-忽略所有微服务，只路由指定微服务" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-忽略所有微服务，只路由指定微服务" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-自定义指定微服务的访问路径" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-自定义指定微服务的访问路径" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-zuul/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-zuul/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-zuul/target/classes/application.yml-同时指定微服务的serviceId和对应路径" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-zuul/target/classes/application.yml-同时指定微服务的serviceId和对应路径" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-zuul/target/classes/application.yml-忽略所有微服务，只路由指定微服务" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-zuul/target/classes/application.yml-忽略所有微服务，只路由指定微服务" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-zuul/target/classes/application.yml-自定义指定微服务的访问路径" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-zuul/target/classes/application.yml-自定义指定微服务的访问路径" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/md/Zuul.md" beforeDir="false" afterPath="$PROJECT_DIR$/md/Zuul.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,6 +43,9 @@
     <ignored path="$PROJECT_DIR$/hystrix-turbine-mq/target/" />
     <ignored path="$PROJECT_DIR$/gateway-zuul/target/" />
     <ignored path="$PROJECT_DIR$/gateway-zuul-reg-exp/target/" />
+    <ignored path="$PROJECT_DIR$/file-upload/target/" />
+    <ignored path="$PROJECT_DIR$/gateway-zuul-file-upload/target/" />
+    <ignored path="$PROJECT_DIR$/gateway-zuul-filter/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+            <state relative-caret-position="399">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -75,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/java/cloud/GatewayZuulApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            <state relative-caret-position="92">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,53 +76,86 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/gateway-zuul/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            <state relative-caret-position="266">
+              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/ConsumerMovieApp.java">
+        <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/PreRequestLogFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-忽略指定微服务">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="41" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/controller/MovieController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+            <state relative-caret-position="171">
+              <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
               <folding>
-                <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#1093#1094#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#345#346#0" expanded="true" />
+                <element signature="e#391#392#0" expanded="true" />
+                <element signature="e#415#416#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-路由前缀">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/GatewayZuulFilterApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-忽略某些路径">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/ErrorRequestLogFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="741">
+              <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/RouteRequestLogFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/PostRequestLogFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -147,6 +171,7 @@
     <findStrings>
       <find>actuator</find>
       <find>spring-cloud-starter-netflix-eureka-client</find>
+      <find>Read timed out</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,17 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/provider-user-my-metadata/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/consumer-movie-understanding-metadata/src/main/java/cloud/controller/MovieController.java" />
-        <option value="$PROJECT_DIR$/provider-user/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/consumer-movie-understanding-metadata/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/consumer-movie-understanding-metadata/pom.xml" />
-        <option value="$PROJECT_DIR$/provider-user-my-metadata/pom.xml" />
-        <option value="$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/ConsumerMovieApp.java" />
-        <option value="$PROJECT_DIR$/consumer-movie-ribbon-customizing-properties/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/consumer-movie-understanding-metadata/src/main/java/cloud/ConsumerMovieMetadataApp.java" />
-        <option value="$PROJECT_DIR$/consumer-movie-ribbon-hystrix/src/main/java/cloud/controller/MovieController.java" />
-        <option value="$PROJECT_DIR$/consumer-movie-ribbon-hystrix/pom.xml" />
         <option value="$PROJECT_DIR$/consumer-movie-feign-hystrix-fallback/src/main/java/cloud/ConsumerMovieFeignHystrixApp.java" />
         <option value="$PROJECT_DIR$/consumer-movie-feign-hystrix-fallback/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/consumer-movie-feign-hystrix-fallback/src/main/java/cloud/feign/UserFeignClient.java" />
@@ -199,13 +213,24 @@
         <option value="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-同时指定url和path" />
         <option value="$PROJECT_DIR$/consumer-movie/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/consumer-movie/src/main/java/cloud/controller/MovieController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/gateway-zuul-reg-exp/src/main/java/cloud/GatewayZuulApp.java" />
         <option value="$PROJECT_DIR$/gateway-zuul-reg-exp/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/gateway-zuul-reg-exp/src/main/java/cloud/GatewayZuulRegExpApp.java" />
         <option value="$PROJECT_DIR$/consumer-movie-ribbon/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/controller/MovieController.java" />
+        <option value="$PROJECT_DIR$/file-upload/pom.xml" />
+        <option value="$PROJECT_DIR$/file-upload/src/main/java/cloud/controller/FileUploadController.java" />
+        <option value="$PROJECT_DIR$/file-upload/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/file-upload/src/main/java/cloud/FileUploadApp.java" />
         <option value="$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/gateway-zuul-file-upload/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/GatewayZuulFilterApp.java" />
+        <option value="$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/ErrorRequestLogFilter.java" />
+        <option value="$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/PreRequestLogFilter.java" />
+        <option value="$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/RouteRequestLogFilter.java" />
+        <option value="$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/PostRequestLogFilter.java" />
+        <option value="$PROJECT_DIR$/gateway-zuul-filter/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -260,8 +285,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="13" />
-    <option name="y" value="-18" />
+    <option name="x" value="151" />
+    <option name="y" value="-12" />
     <option name="width" value="1620" />
     <option name="height" value="920" />
   </component>
@@ -271,6 +296,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,70 +307,25 @@
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-ribbon" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-zuul-filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-ribbon" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-zuul-filter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-ribbon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-ribbon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-ribbon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-movie-ribbon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway-zuul" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway-zuul" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway-zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-zuul-filter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway-zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-zuul-filter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -352,7 +333,7 @@
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway-zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-zuul-filter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -361,21 +342,25 @@
             <path>
               <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway-zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-zuul-filter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-zuul-filter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCloud-Leaning-GamdenSR4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCloud-Leaning-GamdenSR4" type="462c0819:PsiDirectoryNode" />
-              <item name="md" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -389,7 +374,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554264716945" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554703329434" />
     <property name="last_opened_file_path" value="E:/github_pro_3/spring-cloud-docker-microservice-book-code-master" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -397,6 +382,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cloud.filter" />
       <recent name="cloud.feign" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -417,7 +403,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayZuulApp">
+  <component name="RunManager" selected="Spring Boot.GatewayZuulFilterApp">
     <configuration name="ConsumerMovieApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cloud.ConsumerMovieApp" />
       <module name="consumer-movie-ribbon" />
@@ -444,6 +430,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileUploadApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cloud.FileUploadApp" />
+      <module name="file-upload" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayZuulRegExpApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cloud.GatewayZuulRegExpApp" />
       <module name="gateway-zuul-reg-exp" />
@@ -457,19 +456,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiscoveryEurekaApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="discovery-eureka" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cloud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cloud.DiscoveryEurekaApp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GatewayZuulApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gateway-zuul" />
       <extension name="coverage">
@@ -479,6 +465,19 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="cloud.GatewayZuulApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayZuulFilterApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gateway-zuul-filter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cloud.GatewayZuulFilterApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -532,23 +531,23 @@
     </configuration>
     <list>
       <item itemvalue="Application.ConsumerMovieApp" />
-      <item itemvalue="Application.ConsumerMovieApp (1)" />
+      <item itemvalue="Application.GatewayZuulRegExpApp" />
       <item itemvalue="Spring Boot.provider-8082" />
       <item itemvalue="Spring Boot.provider-8083" />
       <item itemvalue="Spring Boot.eureka-8761" />
       <item itemvalue="Spring Boot.eureka-8762" />
       <item itemvalue="Spring Boot.consumer9093" />
       <item itemvalue="Spring Boot.GatewayZuulApp" />
-      <item itemvalue="Spring Boot.DiscoveryEurekaApp" />
-      <item itemvalue="Application.GatewayZuulRegExpApp" />
+      <item itemvalue="Application.FileUploadApp" />
+      <item itemvalue="Spring Boot.GatewayZuulFilterApp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.GatewayZuulFilterApp" />
         <item itemvalue="Spring Boot.GatewayZuulApp" />
+        <item itemvalue="Application.FileUploadApp" />
         <item itemvalue="Application.ConsumerMovieApp" />
         <item itemvalue="Application.GatewayZuulRegExpApp" />
-        <item itemvalue="Application.ConsumerMovieApp (1)" />
-        <item itemvalue="Spring Boot.DiscoveryEurekaApp" />
       </list>
     </recent_temporary>
   </component>
@@ -571,19 +570,21 @@
       <workItem from="1553744777868" duration="691000" />
       <workItem from="1553754594703" duration="3057000" />
       <workItem from="1554097930464" duration="3009000" />
-      <workItem from="1554183812685" duration="21984000" />
+      <workItem from="1554183812685" duration="22781000" />
+      <workItem from="1554366667424" duration="933000" />
+      <workItem from="1554684710113" duration="9222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82753000" />
+    <option name="totallyTimeSpent" value="93705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" x="629" y="131" width="326" height="614" id="Project" order="1" visible="true" weight="0.2622108" />
+      <window_info content_ui="combo" x="629" y="131" width="326" height="614" id="Project" order="1" visible="true" weight="0.25899744" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25321338" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -596,13 +597,13 @@
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.2642559" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.3769124" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.22804718" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32962447" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32896462" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.17385258" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.32974428" />
       <window_info anchor="bottom" id="Spring" order="14" />
@@ -635,126 +636,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hystrix-dashboard/src/main/java/cloud/HystrixDashboardApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-turbine/1.4.0.RELEASE/spring-cloud-netflix-turbine-1.4.0.RELEASE.jar!/org/springframework/cloud/netflix/turbine/TurbineProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1449#1450#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-movie-feign-hystrix-fallback-stream/src/main/java/cloud/ConsumerMovieFeignHystrixStreamApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-movie-feign-hystrix-fallback-stream/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hystrix-turbine/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="35" column="21" selection-start-line="32" selection-start-column="7" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hystrix-turbine/src/main/java/cloud/HystrixTurbineApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" selection-start-line="7" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hystrix-turbine/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="15" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hystrix-turbine-mq/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hystrix-turbine-mq/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="21" selection-start-line="24" selection-start-column="7" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hystrix-turbine-mq/src/main/java/cloud/HystrixTurbineMqApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.4.3.RELEASE/spring-boot-autoconfigure-1.4.3.RELEASE.jar!/org/springframework/boot/autoconfigure/amqp/RabbitProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2090">
-          <caret line="137" column="16" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix-mq/src/main/java/cloud/ConsumerMovieRibbonHystrixMqApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-stream-rabbit/1.3.4.RELEASE/spring-cloud-starter-stream-rabbit-1.3.4.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/eureka-server-ha/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon-hystrix/src/main/java/cloud/ConsumerMovieApp.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -778,31 +662,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consumer-movie-understanding-metadata/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="31" column="21" selection-start-line="28" selection-start-column="7" selection-end-line="31" selection-end-column="21" />
         </state>
       </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/provider-user/src/main/java/cloud/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-zuul/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-netflix-zuul/1.4.0.RELEASE/spring-cloud-starter-netflix-zuul-1.4.0.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-741" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
@@ -856,13 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-忽略所有微服务，只路由指定微服务">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-同时指定微服务的serviceId和对应路径">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -901,14 +765,6 @@
     <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-同时指定path和URL，并且不破坏Zuul的Hystrix、Ribbon特性">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gateway-zuul-reg-exp/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -930,24 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-忽略指定微服务">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/controller/MovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-          <folding>
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/ConsumerMovieApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -955,26 +793,188 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-movie-ribbon/src/main/java/cloud/controller/MovieController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-路由前缀">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/java/cloud/GatewayZuulApp.java">
+    <entry file="file://$PROJECT_DIR$/file-upload/src/main/java/cloud/controller/MovieController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        <state relative-caret-position="114">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file-upload/src/test/java/cloud/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file-upload/src/main/java/cloud/controller/FileUploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-忽略所有微服务，只路由指定微服务">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-忽略指定微服务">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml-忽略某些路径">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file-upload/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file-upload/src/main/java/cloud/FileUploadApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file-upload/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-netflix-zuul/1.4.0.RELEASE/spring-cloud-starter-netflix-zuul-1.4.0.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul-file-upload/src/main/java/cloud/GatewayZuulFileUploadApp.java">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul-file-upload/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar!/com/netflix/zuul/ZuulFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#5632#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/GatewayZuulFilterApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+        <state relative-caret-position="399">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/java/cloud/GatewayZuulApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/PreRequestLogFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/RouteRequestLogFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/ErrorRequestLogFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/java/cloud/filter/PostRequestLogFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-zuul-filter/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
         </state>
       </provider>
     </entry>

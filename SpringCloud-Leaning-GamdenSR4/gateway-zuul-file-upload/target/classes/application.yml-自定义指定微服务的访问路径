@@ -12,10 +12,7 @@ eureka:
   instance:
     prefer-ip-address: true
 
-
-
-management:
-  security:
-    enabled: false
-
-
+#consumer-movie-ribbon 微服务就会被映射到 /user/**路径
+zuul:
+  routes:
+    consumer-movie-ribbon: /user/**

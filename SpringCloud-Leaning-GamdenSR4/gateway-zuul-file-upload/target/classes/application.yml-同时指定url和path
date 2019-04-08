@@ -13,9 +13,9 @@ eureka:
     prefer-ip-address: true
 
 
-
-management:
-  security:
-    enabled: false
-
+zuul:
+  routes:
+    user-route:  # user-route只是给路由一个名称，可以任意起名
+      url: http://localhost:9092/ # 指定的url
+      path: /api/**  # url对应的路径。
 

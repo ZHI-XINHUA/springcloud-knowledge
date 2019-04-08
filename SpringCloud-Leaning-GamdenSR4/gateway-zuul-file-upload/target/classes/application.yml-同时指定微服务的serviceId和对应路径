@@ -13,9 +13,10 @@ eureka:
     prefer-ip-address: true
 
 
-
-management:
-  security:
-    enabled: false
-
+# 同时指定微服务的serviceId和对应路径
+zuul:
+  routes:
+    user-route:  # user-route只是给路由一个名称，可以任意起名
+      service-id: consumer-movie-ribbon #微服务id
+      path: /user/**  #service-id对应的路径
 

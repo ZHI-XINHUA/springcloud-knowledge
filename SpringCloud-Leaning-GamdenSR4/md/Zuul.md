@@ -524,7 +524,19 @@ logging:
 
 
 
+curl -F "file=@F:\test.pdf" localhost:8085/upload
 
+
+
+curl -v -H "Transfer-Encoding:chunked" -F "file=@F:\test.pdf" localhost:8040/file-upload/upload
+
+curl -v -H "Transfer-Encoding:chunked" -F "file=@F:\test.pdf" localhost:8040/zuul/file-upload/upload
+
+
+
+
+http://localhost:8082/user/e98b0351-9fa9-4de7-92e9-cf5c79c663ef
+http://localhost:8041/provider-user/user/e98b0351-9fa9-4de7-92e9-cf5c79c663ef
 
 
 

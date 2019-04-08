@@ -12,10 +12,9 @@ eureka:
   instance:
     prefer-ip-address: true
 
-
-
-management:
-  security:
-    enabled: false
-
+# 忽略所有微服务，只路由指定微服务
+zuul:
+  routes:
+    consumer-movie-ribbon: /user/**
+  ignored-services: '*'
 
