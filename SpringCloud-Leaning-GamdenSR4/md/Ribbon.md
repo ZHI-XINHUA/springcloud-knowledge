@@ -31,7 +31,9 @@ public RestTemplate restTemplate(){
 }
 ```
 
+- RestTemplate是`org.springframework.web.client.RestTemplate`
 
+  
 
 ### 3、Controller 负载均衡访问服务
 

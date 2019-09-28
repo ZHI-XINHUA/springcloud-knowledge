@@ -12,6 +12,7 @@
         <module name="consumer-movie-feign-customizing" />
         <module name="consumer-movie-feign-hystrix-fallback" />
         <module name="consumer-movie-feign-hystrix-fallback-stream" />
+        <module name="consumer-movie-feign-logging" />
         <module name="consumer-movie-feign-manual" />
         <module name="consumer-movie-ribbon" />
         <module name="consumer-movie-ribbon-customizing" />

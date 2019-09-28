@@ -1,6 +1,9 @@
 package configure;
 
-import feign.Contract;
+import cloud.mylog.InfoFeignLoggerFactory;
+import feign.*;
+import feign.auth.BasicAuthRequestInterceptor;
+import org.springframework.cloud.netflix.feign.FeignLoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,4 +21,47 @@ public class FeignConfigure {
     public Contract feignContract() {
         return new feign.Contract.Default();
     }
+
+    /**
+     * 基于HTTP Basic认证
+     * @return
+     */
+    /*@Bean
+    public BasicAuthRequestInterceptor basicAuthRequestInterceptor() {
+        return new BasicAuthRequestInterceptor("user", "password");
+    }*/
+
+    /**
+     * 自定义过滤器
+     * @return
+     */
+    @Bean
+    public RequestInterceptor requestInterceptor(){
+        return new RequestInterceptor(){
+            @Override
+            public void apply(RequestTemplate requestTemplate) {
+                String url = requestTemplate.url();
+                System.out.println("请求url: "+url);
+            }
+        };
+    }
+
+    /**
+     * 定义日志的级别
+     * @return
+     */
+    @Bean
+    Logger.Level feignLevel() {
+        return Logger.Level.FULL;
+    }
+
+    /**
+     * 自定义日志
+     * @return
+     */
+    @Bean
+    FeignLoggerFactory infoFeignLoggerFactory() {
+        return new InfoFeignLoggerFactory();
+    }
+
 }

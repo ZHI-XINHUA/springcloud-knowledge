@@ -1,0 +1,19 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: movie-feign
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://admin:admin@127.0.0.1:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+
+feign:
+  hystrix:
+    enabled: true

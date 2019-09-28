@@ -74,7 +74,7 @@ eureka:
 
 ```
 
-- `eureka.client.register-with-eureka`：表示十分将自己注册到Eureka Server。默认为true
+- `eureka.client.register-with-eureka`：表示将自己注册到Eureka Server。默认为true
 - `eureka.client.fetch-registry`：表示是否从Eureka Server获取注册信息，默认为true。
 - `eureka.client.service-url.defaultZone`：Eureka Server交互地址，查询服务和注册服务都需要依赖这个地址，多个用逗号分隔。
 
@@ -206,6 +206,29 @@ eureka:
 - 使用连接符`---在`配置文件中配置了两个eureka server，启动时设置运行参数启动
 - `register-with-eureka`和`fetch-registry`都设置true，将节点注册到其它节点上，在eureka server上拉取节点信息。实现节点之间的同步，高可用。
 - 启动端口8761时设置jvm参数：`-Dspring.profiles.active=eureka-8761`； 8762设置为`-Dspring.profiles.active=eureka-8762`
+
+
+
+**问题：如果Eureka高可用注册中心registered-replicas没有分布式注册中心**
+
+![](img/2019-9-12-1.png)
+
+
+
+可能的原因有如下：
+
+1. `eureka.client.serviceUrl.defaultZone`配置项的地址，不能使用localhost，要使用service-center-1之类的域名，通过host映射到127.0.0.1；
+
+2. `spring.application.name`或`eureka.instance.appname`必须一致；
+
+3. 相互注册要开启：
+
+   ```yaml
+   eureka.client.register-with-eureka=true
+   eureka.client.fetch-registry=true
+   ```
+
+原文链接：https://blog.csdn.net/u012138272/article/details/81412689
 
 
 
@@ -365,11 +388,182 @@ ps:使用自我保护模式，让Eureka集群更加健壮、稳定。生产环�
 
 
 
+**application.yml.** 
+
+```yaml
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+```
 
 
 
 
 
+## 八、服务治理机制
+
+### （1）服务提供者
+
+#### 服务注册
+
+>  “服务提供者”在启动的时候会通过发送REST请求的方式将自己注册到Eureka Server上，同时带上了自身服务的一些元数据信息。Eureka Server接受到这个REST请求之后，**将元数据信息存储在一个双层Map中，其中第一层key是服务名，第二层key是具体服务的实例名。**
+
+- `eureka.client.register-with-eureka`：默认为true，true时 启动注册到注册中心
+
+
+
+#### 服务同步
+
+> 注册中心之间相互注册服务，当服务提供者发送注册请求到一个注册中心时，它会将该请求转发给集群中相连的其他注册中心，从而实现注册中心之间的服务同步。这样服务提供者的服务信息旧可以通过任意一台注册中心获取到。
+
+
+
+#### 服务续约
+
+> 注册完服务后，服务提供者会维护一个心跳用来持续告诉Eureka Server：“我还活着”，已防止Eureka Server的“剔除任务”将该服务实例从服务列表中排除出去--------称为服务续约
+
+有关服务续约的两个重要属性：
+
+- `eureka.instance.lease-renewal-interval-in-seconds`：默认30秒，用于定义服务续约任务的调用间隔时间
+- `eureka.instance.lease-expiration-duration-in-seconds`：默认90秒，用于定义服务失效的时间
+
+
+
+### （2）服务消费者
+
+#### 获取服务
+
+> 消费者会发送一个REST请求给服务注册中心来获取注册的服务清单。为了性能考虑，Eureka Server会维护一份只读的服务清单来返回给客户端，同时该缓存清单会每隔30秒更新一次
+
+- `eureka.client.fetch-registry`： 拉取注册中心服务缓存清单。默认为true，获取服务是服务消费的基础，所以必须确保这个参数为true
+- `eureka.client.registry-fetch-interval-seconds`：默认30秒，更新缓存清单时间
+
+
+
+####  服务调用
+
+> 服务消费者在获取服务清单后，通过服务名可以获得具体服务的实例名和改实例的元数据信息。根据这些信息，客户端可以根据自己的需要决定具体调用那个实例，在Ribbon中会默认采用轮询的方式进行调用，从而实现客户端的负载均衡。
+
+
+
+#### 服务下线
+
+> 在系统运行过程中必然会面临关闭或重启服务的某个实例情况，在服务关闭期间，我们自然不希望客户端会继续调用关闭了的实例。所以在客户端程序中，当服务实例进行正常的关闭操作时，它会触发一个服务下线的REST请求给Eureka Server，告诉服务注册中心：“我要下线了”。 服务端在接收到请求之后，将该服务状态置为下线（DOWN），并把下线事件传播出去。
+
+
+
+### （3）注册中心
+
+#### 失效剔除
+
+> 有些时候，我们的服务实例并不一定会正常下线，可能由于内存溢出、网络故障灯原因使得服务不能正常工作，而服务注册中心并未收到“服务下线”的请求。为了从服务列表中将这些无法提供服务的实例剔除，Eureka Server在启动的时候会创建一个定时任务，默认每隔一段时间（默认60秒）将当前清单中超时（默认90秒）没有续约的服务剔除出去
+
+
+
+#### 自我保护
+
+上面已介绍自我保护如何使用。
+
+> Eureka Server在运行期间，会统计心跳失败的比例在15分钟之内是否低于85%，如果出现低于的情况（在单机调试的时候很容易满足，实际生产环境上通常是由于网络不稳定导致），Eureka Server会将当前的实例注册信息保护起来，让这些实例不会过期，尽可能保护这些注册信息。但是，在这段保护期间内实例若出现问题，那么客户端很容易拿到实际已经不存在的服务实例，会出现调用失败的情况，所以客户端必须有容错机制，比如可以使用请求重试、断路器等机制
+
+
+
+### 九、配置详解
+
+Eureka的服务治理体系中，主要分为服务端和客户端两个角色，服务端为服务注册中心，而客户端为各个提供接口的微服务应用。
+
+Eureka客户端配置主要分为下面两个方面：
+
+- 服务注册相关配置信息，包含服务注册中心的地址、服务获取的间隔时间、可用区域。
+- 服务实例相关的配置，包含服务实例的名称、ip地址、端口号、监控检查路径等等。
+
+而Eureka服务端更多地类似一个现成产品，大多数情况下，我们不需要修改它的配置信息。
+
+
+
+
+
+## 十、服务注册类配置
+
+关于服务注册类的配置信息，可以通过查询`org.springframework.cloud.netflix.eureka.EurekaClientConfigBean`源码知晓。这些配置信息都以`eureka.client`为前缀。
+
+
+
+| 参数名                                        | 说明                                                         | 默认值 |
+| --------------------------------------------- | ------------------------------------------------------------ | ------ |
+| enabled                                       | 启动Eureka客户端                                             | true   |
+| registryFetchIntervalSeconds                  | 从Eureka服务端获取注册信息的间隔时间                         | 30     |
+| instanceInfoReplicationIntervalSeconds        | 更新实例信息的变化到Eureka服务端的间隔时间                   | 30     |
+| initialInstanceInfoReplicationIntervalSeconds | 初始化实例信息到Eureka服务端的间隔时间                       | 40     |
+| eurekaServiceUrlPollIntervalSeconds           | 轮询Eureka服务端地址更改的间隔时间，当与Spring Cloud Config配合，动态刷新Eureka的serviceURL地址时  需要关注该参数 | 5 * 60 |
+| eurekaServerReadTimeoutSeconds                | 读取Eureka Server信息的超时时间                              | 8      |
+| eurekaServerConnectTimeoutSeconds             | 连接Eureka Server的超时时间                                  | 5      |
+| eurekaServerTotalConnections                  | 从Eureka客户端到所有Eureka服务端的连接总数                   | 200    |
+| eurekaServerTotalConnectionsPerHost           | 从Eureka客户端到每个Eureka服务端主机的连接总数               | 50     |
+| eurekaConnectionIdleTimeoutSeconds            | Eureka服务端连接的空闲关闭时间                               | 30     |
+| heartbeatExecutorThreadPoolSize               | 心跳连接池的初始化线程数                                     | 2      |
+| heartbeatExecutorExponentialBackOffBound      | 心跳超时重试延迟时间的最大乘数值                             | 10     |
+| cacheRefreshExecutorThreadPoolSize            | 缓存刷新线程池的初始化线程数                                 | 2      |
+| cacheRefreshExecutorExponentialBackOffBound   | 缓存刷新重试延迟时间的最大乘数值                             | 10     |
+| useDnsForFetchingServiceUrls                  | 使用DNS来获取Eureka服务端的serviceUrl                        | false  |
+| registerWithEureka                            | 是否要将自身的实例信息注册到Eureka服务端                     | true   |
+| preferSameZoneEureka                          | 是否偏好使用处于相同Zone的Eureka服务端                       | true   |
+| filterOnlyUpInstances                         | 获取实例时是否过滤，仅保留UP状态实例                         | true   |
+| fetchRegistry                                 | 是否从Eureka服务端获取注册信息                               | true   |
+
+
+
+## 十一、服务实例类注册配置
+
+关于服务实例类的配置信息，可以通过`org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean`源码来获取详细内容。 这些配置都以`eureka.instance`为前缀。
+
+### 元数据
+
+元数据是Eureka客户端在向服务注册中心发送注册请求时，用来描述自身服务信息的对象，其中包含了一些标准化的元数据，比如服务名称、实例名称、实例IP、实例端口等用于服务治理的重要信息；以及一些用于负载均衡策略或是其他特殊用途的自定义元数据信息。
+
+`com.netflix.appinfo.InstanceInfo`类中详细定义了Ureka对元数据的定义，其中，Map<String,String> metadata是定义的元数据信息。自定义元数据，可以通过`eureka.instance.metadataMap.<key>=<value>`的格式来进行配置。如：`eureka.instance.metadataMap.zone=shanghai`
+
+
+
+### 实例名配置
+
+实例名是区分同一服务中不同实例的唯一标识。在Netflix Eureka的原生实现中，实例名采用主机名为默认值，这样的设置使得在同一主机上无法启动多个相同的服务实例。  所以，在Spring Cloud Eureka的配置汇总，针对同一主机中启动多实例的情况，对实例名的默认命名做了更加合理的扩展，它采用了如下默认规则：
+
+```yaml
+${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id}:${server.port}
+```
+
+如果在本地进行客户端负载均衡调试时，需要启动同一服务的多个实例，直接启动同一个应用必然会产生端口冲突。需要可以指定server.port来启动，但是这样略显麻烦。对于这个问题，我们可以通过设置实例名规则(使用随机数`${random.int}`)解决，如：
+
+```yaml
+eureka.instance.instanceId=${spring.application.name}:${random.int}
+```
+
+
+
+### 其它配置
+
+| 参数名                           | 说明                                                         | 默认值 |
+| -------------------------------- | ------------------------------------------------------------ | ------ |
+| preferIpAddress                  | 是否优先使用IP地址昨晚主机名的标识                           | false  |
+| leaseRenewalIntervalInSeconds    | Eureka客户端向服务端发送心跳的时间间隔                       | 30     |
+| leaseExpirationDurationInSeconds | Eureka服务端在接收到最后一次心跳之后等待的时间上限，超过该时间之后服务端会将该服务实例从服务清单中剔除，从而禁止服务调用请求被发送到改实例上 | 90     |
+| nonSecurePort                    | 非安全的通讯端口号                                           | 80     |
+| securePort                       | 安全的通讯端口号                                             | 443    |
+| nonSecurePortEnabled             | 是否启用非安全的通讯端口号                                   | true   |
+| securePortEnabled                | 是否启用安全的通讯端口号                                     |        |
+| hostname                         | 主机名，不配置的时候将根据操作系统的主机名来获取             |        |
+
+
+
+## 十二、跨平台支持
+
+Eureka的通讯机制使用了**HTTP的REST接口实现**，这也是Eureka同其他服务注册工具的一个关键不同点。由于HTTP的平台无关系，虽然Eureka Server 通过java实现，但是在其下的微服务应用并不限于使用java来进行开发。跨平台本身就是微服务架构的九大特性之一，只有实现了对技术平台的透明，才能更好地发挥不同语言对不同业务处理能力的优势。
+
+微服务的九大特性：
+
+<https://www.jianshu.com/p/3d856716e3d5> 
 
 
 
