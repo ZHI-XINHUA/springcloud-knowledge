@@ -30,7 +30,9 @@ public class MovieController {
     public UserVO findUser(@PathVariable String userId){
         log.info("MovieController!findUser-->restTemplate访问服务");
         String url ="http://PROVIDER-USER/user/"+userId;
-        return restTemplate.getForObject(url,UserVO.class);
+        UserVO userVO = restTemplate.getForObject(url,UserVO.class);
+        userVO.setEmail("来自movie-ribbon");
+        return userVO;
     }
 
     public UserVO findUserError(String userId){

@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/user/pom.xml" />
         <option value="$PROJECT_DIR$/movie-ribbon/pom.xml" />
         <option value="$PROJECT_DIR$/movie-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway-zuul/pom.xml" />
       </list>
     </option>
   </component>

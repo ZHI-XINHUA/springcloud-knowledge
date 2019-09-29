@@ -8,6 +8,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+
 
 /**
  * @ClassName MovieController
@@ -30,7 +33,9 @@ public class MovieController {
     //@HystrixCommand(fallbackMethod ="findUserError" )
     public UserVO findUser(@PathVariable String userId){
         log.info("MovieController!findUser-->feign访问服务");
-        return  userFeignClient.getUser(userId);
+        UserVO userVO = userFeignClient.getUser(userId);
+        userVO.setEmail("来自movie-feign");
+        return userVO;
     }
 
   /*  public UserVO findUserError(String userId){
@@ -57,6 +62,8 @@ public class MovieController {
         user.setEmail("1960881192@qq.com");
         return userFeignClient.sayHi(user);
     }
+
+
 
 
 }

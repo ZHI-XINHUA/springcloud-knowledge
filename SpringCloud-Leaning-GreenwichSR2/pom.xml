@@ -21,6 +21,7 @@
     <module>user</module>
     <module>movie-ribbon</module>
     <module>movie-feign</module>
+    <module>gateway-zuul</module>
   </modules>
 
   <properties>
@@ -56,6 +57,11 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        <version>${spring-cloud.release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         <version>${spring-cloud.release.version}</version>
       </dependency>
       <!--fegin:声明式、模板化的http客户端-->

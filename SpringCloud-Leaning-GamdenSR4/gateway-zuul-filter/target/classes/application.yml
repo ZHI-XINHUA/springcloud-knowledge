@@ -8,15 +8,17 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka #Eureka Server交互地址，查询服务和注册服务都需要依赖这个地址，多个用逗号分隔。
+      defaultZone: http://admin:admin@127.0.0.1:8761/eureka/ #Eureka Server交互地址，查询服务和注册服务都需要依赖这个地址，多个用逗号分隔。
   instance:
     prefer-ip-address: true
 
 
+# 禁用zuul过滤器
 zuul:
   PreRequestLogFilter:
     pre:
       disable: true
+
 management:
   security:
     enabled: false
