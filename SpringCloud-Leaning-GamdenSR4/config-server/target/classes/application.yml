@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/olay/config.git
+          username: 793597462@qq.com
+          password: zhixinhua920409
+          repos:
+            user:
+              pattern: microserver-user*/dev*,microserver-user*/test*,microserver-user*/pro*
+              uri: https://gitee.com/olay/microserver-user-config.git
+            order:
+              pattern: microserver-order*/dev*,microserver-order*/test*,microserver-order*/pro*
+              uri: https://gitee.com/olay/microserver-order-config.git
+            movie:
+              pattern: microserver-movie*/dev*,microserver-movie*/test*,microserver-movie*/pro*
+              uri: https://gitee.com/olay/microserver-movie-config.git

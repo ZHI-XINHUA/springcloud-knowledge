@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
+        <module name="config-client" />
+        <module name="config-server" />
         <module name="consumer-movie" />
         <module name="consumer-movie-feign" />
         <module name="consumer-movie-feign-customizing" />
