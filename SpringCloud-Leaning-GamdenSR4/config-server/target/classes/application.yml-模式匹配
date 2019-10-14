@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/olay/config.git
+          #username: 793597462@qq.com
+          #password: xxx
+          repos:
+            user:
+              pattern: microservice-user/dev*,microservice-user/test*,microservice-user/pro*
+              uri: https://gitee.com/olay/microserver-user-config.git
+            order:
+              pattern: microservice-order/dev*,microservice-order/test*,microservice-order/pro*
+              uri: https://gitee.com/olay/microserver-order-config.git
+            movie:
+              pattern: microservice-movie/dev*,microservice-movie/test*,microservice-movie/pro*
+              uri: https://gitee.com/olay/microserver-movie-config.git
+management:
+  security:
+    enabled: false
+
+logging:
+  level:
+    org.springframework.cloud: DEBUG
+    org.springframework.boot: DEBUG

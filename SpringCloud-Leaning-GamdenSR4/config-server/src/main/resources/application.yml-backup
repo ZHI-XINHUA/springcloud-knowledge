@@ -8,5 +8,5 @@ spring:
       server:
         git:
           uri: https://gitee.com/olay/config.git
-          username: 793597462@qq.com
-          password: zhixinhua920409
+          #username: 793597462@qq.com
+          #password: xxx

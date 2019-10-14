@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96578c08-626e-42ef-8479-976be2d76685" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-zuul/src/main/java/com/zxh/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-zuul/src/main/java/com/zxh/filter/AccessFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/gateway-zuul-filter/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/gateway-zuul-filter/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/gateway-zuul-filter/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/gateway-zuul-filter/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/gateway-zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/gateway-zuul/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/gateway-zuul/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/gateway-zuul/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/gateway-zuul/target/classes/cloud/DiscoveryEurekaApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringCloud-Leaning-GamdenSR4/gateway-zuul/target/classes/cloud/EurekaServerApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-feign/src/main/java/com/zxh/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-feign/src/main/java/com/zxh/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-feign/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/movie-feign/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-feign/target/classes/com/zxh/controller/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/movie-feign/target/classes/com/zxh/controller/MovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-ribbon/src/main/java/com/zxh/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-ribbon/src/main/java/com/zxh/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-ribbon/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/movie-ribbon/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-ribbon/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/movie-ribbon/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-ribbon/target/classes/com/zxh/controller/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/movie-ribbon/target/classes/com/zxh/controller/MovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -102,8 +81,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="21" selection-start-line="21" selection-end-line="31" selection-end-column="20" />
+            <state relative-caret-position="530">
+              <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -551,7 +530,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569742257723" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569749387673" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -649,18 +628,18 @@
       <updated>1569460220888</updated>
       <workItem from="1569460227667" duration="2694000" />
       <workItem from="1569463112655" duration="28642000" />
-      <workItem from="1569650753807" duration="17495000" />
+      <workItem from="1569650753807" duration="18140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48831000" />
+    <option name="totallyTimeSpent" value="49476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" x="629" y="131" width="326" height="614" id="Project" order="1" visible="true" weight="0.21465296" />
+      <window_info content_ui="combo" x="629" y="131" width="326" height="614" id="Project" order="1" visible="true" weight="0.21465296" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25321338" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -673,7 +652,7 @@
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.26564673" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.26564673" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.36161336" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -1122,8 +1101,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gateway-zuul/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="21" selection-start-line="21" selection-end-line="31" selection-end-column="20" />
+        <state relative-caret-position="530">
+          <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
         </state>
       </provider>
     </entry>

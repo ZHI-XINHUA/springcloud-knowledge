@@ -7,6 +7,4 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/olay/config.git
-          #username: 793597462@qq.com
-          #password: xxx
+          uri: https://gitee.com/olay/{application}.git  # 如 application 为spring-cloud-samples
