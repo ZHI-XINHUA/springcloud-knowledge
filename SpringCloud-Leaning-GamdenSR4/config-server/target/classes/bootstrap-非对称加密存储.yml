@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/olay/config.git
+encrypt:
+  key-store:
+    location: server.jks
+    password: zhixinhua
+    alias: mytestkey
+    secret: changeme
