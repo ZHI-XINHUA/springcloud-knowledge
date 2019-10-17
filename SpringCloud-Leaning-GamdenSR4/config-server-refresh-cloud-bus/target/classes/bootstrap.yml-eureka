@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/olay/config.git
+    bus:
+      trace:
+        enabled: true  # 跟踪总线
+  rabbitmq:            # 配置总线bus 的rabbitmq连接
+    host: 192.168.3.49
+    port: 5672
+    username: guest
+    password: guest
+management:
+  security:
+    enabled: false #设置为false 不然访问/refresh 401未授权错误
