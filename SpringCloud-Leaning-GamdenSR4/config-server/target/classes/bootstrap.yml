@@ -7,7 +7,12 @@ spring:
     config:
       server:
         git:
+          # 配置git仓库地址
           uri: https://gitee.com/olay/config.git
+          # git仓库的账号
+          #username:
+          # git仓库密码
+          #password:
 encrypt:
   key-store:
     location: server.jks

@@ -8,7 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
         <module name="config-client" />
+        <module name="config-client-refresh" />
+        <module name="config-client-refresh-cloud-bus" />
+        <module name="config-client-retry" />
         <module name="config-server" />
+        <module name="config-server-refresh-cloud-bus" />
         <module name="consumer-movie" />
         <module name="consumer-movie-feign" />
         <module name="consumer-movie-feign-customizing" />
@@ -37,6 +41,7 @@
         <module name="provider-user" />
         <module name="provider-user-my-metadata" />
         <module name="provider-user-with-auth" />
+        <module name="stream-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

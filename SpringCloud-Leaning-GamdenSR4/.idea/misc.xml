@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/discovery-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/consumer-movie-feign-logging/pom.xml" />
+        <option value="$PROJECT_DIR$/config-server-refresh-cloud-bus/pom.xml" />
       </list>
     </option>
   </component>

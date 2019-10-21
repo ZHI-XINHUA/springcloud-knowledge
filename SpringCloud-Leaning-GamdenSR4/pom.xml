@@ -51,6 +51,7 @@
 	  <module>config-client-refresh-cloud-bus</module>
 	  <module>config-server-refresh-cloud-bus</module>
 	  <module>config-client-retry</module>	  
+	  <module>stream-client</module>	
     </modules>
 
     <name>microserver-parent</name>
@@ -148,6 +149,11 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-aop</artifactId>
         <version>1.3.2.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+        <version>1.3.4.RELEASE</version>
       </dependency>
       <dependency>
         <groupId>junit</groupId>
