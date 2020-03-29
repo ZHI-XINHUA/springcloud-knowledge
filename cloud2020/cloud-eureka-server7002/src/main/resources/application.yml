@@ -1,5 +1,5 @@
 server:
-  port: 7001
+  port: 7002
 eureka:
   instance:
     hostname: localhost #eureka服务端的实例名称
@@ -10,4 +10,4 @@ eureka:
     fetch-registry: true
     service-url:
       # 设置与Eureka Server交互的地址，查询服务和注册服务需要依赖的地址
-      defaultZone: http://localhost:7002/eureka
+      defaultZone: http://localhost:7001/eureka
